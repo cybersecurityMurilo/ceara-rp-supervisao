@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Painel Ceará RP</title>
+</head>
+
+<body>
+
+<h1>Painel Staff - Ceará RP</h1>
+
+<h2>Login</h2>
+
+<button onclick="loginSupervisor()">Entrar como Supervisor</button>
+
+<button onclick="loginVisitante()">Entrar como Visitante</button>
+
 <script>
-window.location.href = "login.html"
+
+function loginSupervisor(){
+
+localStorage.setItem("cargo","supervisor");
+window.location.href = "dashboard.html";
+
+}
+
+function loginVisitante(){
+
+localStorage.setItem("cargo","visitante");
+window.location.href = "dashboard.html";
+
+}
+
 </script>
+
+</body>
+</html>
