@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
+<meta charset="UTF-8">
 <title>Inatividade Staff</title>
 <link rel="stylesheet" href="style.css">
+
+<script>
+
+let cargo = localStorage.getItem("cargo");
+
+if(!cargo){
+window.location.href = "login.html";
+}
+
+</script>
+
 </head>
 
 <body>
 
 <h1>Relatório de Inatividade</h1>
 
-<p>Lista de staffs inativos.</p>
+<p>Lista de staffs inativos:</p>
 
-<a href="index.html">Voltar</a>
+<br>
+
+<ul>
+
+<li>Poderoso</li>
+<li>Unknown</li>
+
+</ul>
+
+<br><br>
+
+<a href="visitante.html">⬅ Voltar ao painel</a>
 
 </body>
 
