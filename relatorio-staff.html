@@ -8,12 +8,16 @@
 
 <body>
 
-<h1>Relatório da Staff</h1>
+<script>
 
-<p>Aqui aparecerão os relatórios.</p>
+let cargo = localStorage.getItem("cargo");
 
-<a href="index.html">Voltar</a>
+if(!cargo){
+window.location.href = "login.html";
+}
 
+</script>
+  
 </body>
 
 </html>
