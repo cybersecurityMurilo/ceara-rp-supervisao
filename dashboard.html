@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 
 <head>
-<meta charset="UTF-8">
-<title>Dashboard Supervisor</title>
-<link rel="stylesheet" href="style.css">
-
-<script>
-
-let cargo = localStorage.getItem("cargo");
-
-if(cargo !== "supervisor"){
-window.location.href = "visitante.html";
-}
-
-</script>
-
+<title>Dashboard</title>
 </head>
 
-<body>
+<body onload="verificarLogin(); carregarStaff();">
 
-<h1>Dashboard Supervisor</h1>
+<h1>📊 Dashboard Ceará RP</h1>
 
-<p>Painel de controle da staff do Ceará RP</p>
+<button onclick="logout()">Sair</button>
 
-<br>
+<hr>
+
+<h2>Adicionar Staff</h2>
+
+<input id="nome" placeholder="Nome">
+<input id="cargoStaff" placeholder="Cargo">
+
+<button onclick="adicionarStaff()">Adicionar</button>
+
+<hr>
+
+<h2>Lista de Staff</h2>
+
+<ul id="lista-staff"></ul>
+
+<hr>
 
 <h2>Relatórios</h2>
 
-<a href="relatorio-staff.html">👥 Editar Relatório Staff</a>
+<a href="relatorio-staff.html">
+<button>Relatório Staff</button>
+</a>
 
-<br><br>
+<a href="atividade.html">
+<button>Relatório de Atividade</button>
+</a>
 
-<a href="relatorio-inatividade.html">⚠️ Editar Relatório de Inatividade</a>
-
-<br><br>
-
-<h2>Painel</h2>
-
-<a href="visitante.html">👀 Ver painel de visitante</a>
-
-<br><br>
-
-<a href="login.html">🚪 Sair</a>
+<script src="script.js"></script>
 
 </body>
-
 </html>
