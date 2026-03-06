@@ -1,57 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Relatório Staff</title>
 </head>
 
 <body>
 
-<h1>📋 Avaliação Semanal Staff</h1>
+<h1>Avaliação Semanal Staff</h1>
 
-<label>Supervisor</label>
-<input type="text" id="supervisor">
+<input id="nome" placeholder="Nome do staff">
 
-<label>Data</label>
-<input type="date" id="data">
+<input id="nota" placeholder="Nota">
 
-<label>Servidor</label>
-<input type="text" id="servidor" value="Ceará RP">
+<button onclick="salvar()">Salvar</button>
 
-<hr>
-
-<h2>Nome do Staff</h2>
-<input type="text" id="nome">
-
-<h2>Cargo</h2>
-<select id="cargo">
-<option>Estagiário</option>
-<option>Suporte</option>
-<option>Moderador</option>
-<option>Administrador</option>
-<option>Administrador Sênior</option>
-</select>
-
-<h2>Atividade</h2>
-<input type="number" id="atividade">
-
-<h2>Postura</h2>
-<input type="number" id="postura">
-
-<h2>Pontos positivos</h2>
-<textarea id="positivo"></textarea>
-
-<h2>Pontos a melhorar</h2>
-<textarea id="melhorar"></textarea>
-
-<br><br>
-
-<button onclick="salvarRelatorio()">Salvar Avaliação</button>
-
-<hr>
-
-<h2>Relatórios salvos</h2>
-
-<ul id="lista-relatorios"></ul>
+<ul id="lista"></ul>
 
 <script src="relatorio.js"></script>
 
