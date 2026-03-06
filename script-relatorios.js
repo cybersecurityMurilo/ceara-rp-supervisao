@@ -1,37 +1,65 @@
-function carregarStaff(){
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-let staff = JSON.parse(localStorage.getItem("staff")) || [];
+<head>
+<meta charset="UTF-8">
+<title>Relatório Staff</title>
+<link rel="stylesheet" href="style.css">
 
-let lista = document.getElementById("lista-staff");
+<script src="script-relatorios.js"></script>
 
-lista.innerHTML = "";
+<script>
 
-staff.forEach(function(membro){
+let cargo = localStorage.getItem("cargo");
 
-let item = document.createElement("li");
+if(!cargo){
+window.location.href = "login.html";
+}
 
-item.innerText = membro.nome + " — " + membro.cargo;
+</script>
 
-lista.appendChild(item);
+</head>
 
-});
+<body onload="carregarStaff()">
+
+<h1>Relatório da Staff</h1>
+
+<ul id="lista-staff"></ul>
+
+<br>
+
+<div id="painel-edicao"></div>
+
+<br>
+
+<a href="visitante.html">⬅ Voltar</a>
+
+<script>
+
+let cargoAtual = localStorage.getItem("cargo");
+
+if(cargoAtual === "supervisor"){
+
+document.getElementById("painel-edicao").innerHTML = `
+
+<h2>Adicionar Staff</h2>
+
+<input id="nome" placeholder="Nome do staff">
+
+<br><br>
+
+<input id="cargo" placeholder="Cargo">
+
+<br><br>
+
+<button onclick="adicionarStaff()">Adicionar</button>
+
+`;
 
 }
 
-function adicionarStaff(){
+</script>
 
-let nome = document.getElementById("nome").value;
-let cargo = document.getElementById("cargo").value;
+</body>
 
-let staff = JSON.parse(localStorage.getItem("staff")) || [];
-
-staff.push({
-nome:nome,
-cargo:cargo
-});
-
-localStorage.setItem("staff", JSON.stringify(staff));
-
-carregarStaff();
-
-}
+</html>
