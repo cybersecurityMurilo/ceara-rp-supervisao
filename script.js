@@ -15,7 +15,7 @@ else if(usuario === "visitante" && senha === "12345"){
 
 localStorage.setItem("cargo","visitante");
 
-window.location.href = "dashboard.html";
+window.location.href = "visitante.html";
 
 }
 
