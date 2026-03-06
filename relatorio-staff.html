@@ -1,64 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html>
 <head>
-
-<meta charset="UTF-8">
 <title>Relatório Staff</title>
-<link rel="stylesheet" href="style.css">
-
-<script src="script-relatorios.js"></script>
-
-<script>
-
-let cargo = localStorage.getItem("cargo");
-
-if(!cargo){
-window.location.href = "login.html";
-}
-
-</script>
-
 </head>
 
-<script>
+<body>
 
-let cargoAtual = localStorage.getItem("cargo");
+<h1>📋 Avaliação Semanal Staff</h1>
 
-if(cargoAtual === "supervisor"){
+<label>Supervisor</label>
+<input type="text" id="supervisor">
 
-document.getElementById("painel-edicao").innerHTML = `
+<label>Data</label>
+<input type="date" id="data">
 
-<h2>Adicionar Staff</h2>
+<label>Servidor</label>
+<input type="text" id="servidor" value="Ceará RP">
 
-<input id="nome" placeholder="Nome do staff">
+<hr>
+
+<h2>Nome do Staff</h2>
+<input type="text" id="nome">
+
+<h2>Cargo</h2>
+<select id="cargo">
+<option>Estagiário</option>
+<option>Suporte</option>
+<option>Moderador</option>
+<option>Administrador</option>
+<option>Administrador Sênior</option>
+</select>
+
+<h2>Atividade</h2>
+<input type="number" id="atividade">
+
+<h2>Postura</h2>
+<input type="number" id="postura">
+
+<h2>Pontos positivos</h2>
+<textarea id="positivo"></textarea>
+
+<h2>Pontos a melhorar</h2>
+<textarea id="melhorar"></textarea>
 
 <br><br>
 
-<input id="cargo" placeholder="Cargo">
+<button onclick="salvarRelatorio()">Salvar Avaliação</button>
 
-<br><br>
+<hr>
 
-<button onclick="adicionarStaff()">Adicionar</button>
+<h2>Relatórios salvos</h2>
 
-`;
+<ul id="lista-relatorios"></ul>
 
-}
-
-</script>
-  
-<body onload="carregarStaff()">
-
-<h1>Relatório da Staff</h1>
-
-<ul id="lista-staff"></ul>
-
-<div id="painel-edicao"></div>
-
-<br>
-
-<a href="visitante.html">⬅ Voltar</a>
+<script src="relatorio.js"></script>
 
 </body>
-
 </html>
