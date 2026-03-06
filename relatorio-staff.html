@@ -21,6 +21,32 @@ window.location.href = "login.html";
 
 </head>
 
+<script>
+
+let cargoAtual = localStorage.getItem("cargo");
+
+if(cargoAtual === "supervisor"){
+
+document.getElementById("painel-edicao").innerHTML = `
+
+<h2>Adicionar Staff</h2>
+
+<input id="nome" placeholder="Nome do staff">
+
+<br><br>
+
+<input id="cargo" placeholder="Cargo">
+
+<br><br>
+
+<button onclick="adicionarStaff()">Adicionar</button>
+
+`;
+
+}
+
+</script>
+  
 <body onload="carregarStaff()">
 
 <h1>Relatório da Staff</h1>
