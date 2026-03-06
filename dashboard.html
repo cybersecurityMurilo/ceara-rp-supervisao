@@ -20,8 +20,8 @@
 
 let cargo = localStorage.getItem("cargo");
 
-if(!cargo){
-window.location.href = "login.html";
+if(cargo !== "supervisor"){
+window.location.href = "visitante.html";
 }
 
 </script>
