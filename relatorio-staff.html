@@ -2,9 +2,12 @@
 <html lang="pt-BR">
 
 <head>
+
 <meta charset="UTF-8">
 <title>Relatório Staff</title>
 <link rel="stylesheet" href="style.css">
+
+<script src="script-relatorios.js"></script>
 
 <script>
 
@@ -18,32 +21,17 @@ window.location.href = "login.html";
 
 </head>
 
-<body>
+<body onload="carregarStaff()">
 
 <h1>Relatório da Staff</h1>
 
-<p>Lista atual da staff do Ceará RP:</p>
+<ul id="lista-staff"></ul>
+
+<div id="painel-edicao"></div>
 
 <br>
 
-<ul>
-
-<li>Moura — Suporte</li>
-<li>David Luiz — Suporte</li>
-<li>Lucas — Suporte</li>
-<li>Unknown — Suporte</li>
-<li>Dark — Suporte</li>
-
-<li>Noxen — Moderador</li>
-<li>TR Raio — Moderador</li>
-
-<li>Poderoso — Estagiário</li>
-
-</ul>
-
-<br><br>
-
-<a href="visitante.html">⬅ Voltar ao painel</a>
+<a href="visitante.html">⬅ Voltar</a>
 
 </body>
 
